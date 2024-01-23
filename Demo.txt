@@ -1,2 +1,27 @@
-noi dung 1
- noi dung 2
+import java.util.Scanner;
+
+public class PTbac1 {
+    public static void main(String[] args){
+        int a;
+        int b;
+        a = NhapSoNguyen("Nhap a : ");
+        b = NhapSoNguyen("Nhap b : ");
+        GiaiPTbac1(a,b);
+    }
+    public static int NhapSoNguyen(String str)  
+    {
+        int x;
+        Scanner sc = new Scanner(System.in);
+        System.out.println(str);
+        x= sc.nextInt();
+        return x;
+    }
+    public static void  GiaiPTbac1(int a,int b){
+        if(a ==0){
+            if(b ==0)
+            System.out.println("Pt vo so nghiem");
+            else System.out.println("Pt vo nghiem");
+        }else 
+        System.out.println("Pt co nghiem : "+(-b/a));
+    }
+}
